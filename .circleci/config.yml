@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: docker backend
-          command: sudo docker-compose up
+          command: docker-compose up
   frontend_build:
     docker:
       - image: circleci/node:latest
@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           name: docker frontend
-          command: sudo docker-compose up
+          command: docker-compose up
 
 workflows:
   version: 2.1
