@@ -10,7 +10,7 @@ jobs:
       - run: npm install
       - run:
           name: Docker build backend
-          command: docker build --cache-from=app -t app .
+          command: docker-compose -f
 
   frontend_build:
     working_directory: ~/frontend
@@ -21,7 +21,7 @@ jobs:
       - run: npm install
       - run:
           name: Docker build frontend
-          command: docker build --cache-from=app -t app .
+          command: docker-compose -f
 
 workflows:
   version: 2
