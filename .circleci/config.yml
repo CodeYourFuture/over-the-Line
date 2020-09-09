@@ -2,12 +2,14 @@ version: 2.1
 executorType: machine
 jobs:
   backend_build:
-    working_directory: ~/app
+    working_directory: ~/backend
     docker:
       - image: circleci/node:latest
     steps:
-      - checkout
+      - checkout:
+          path: ~/backend
       - run:
+          path: ~/backend
           name: docker backend
           command: docker-compose up
   frontend_build:
