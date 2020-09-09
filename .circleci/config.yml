@@ -26,6 +26,4 @@ workflows:
   my_workflow:
     jobs:
       - backend_build
-      - frontend_build:
-          requires:
-            - backend_build
+      - frontend_build
