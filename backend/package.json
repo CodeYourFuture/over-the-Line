@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "lint": "eslint",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -16,7 +17,8 @@
     "jade": "~1.11.0",
     "mongodb": "^3.6.0",
     "mongoose": "^5.10.2",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {
     "eslint": "^7.2.0",

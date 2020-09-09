@@ -6,7 +6,7 @@ services:
     build: ./backend
     ports:
       - "3001:3001"
-    command: npm start
+    command: npm run dev
   client:
     stdin_open: true
     build: ./frontend

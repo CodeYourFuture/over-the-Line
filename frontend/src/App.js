@@ -16,7 +16,6 @@ function App() {
   const [showArtists, setShowArtists] = useState(false);
 
   let singleProductCheck;
-  let singleProduct;
 
   if (artist.category) {
     singleProductCheck = artist.category.filter((cat) =>
