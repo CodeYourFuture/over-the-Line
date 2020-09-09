@@ -4,7 +4,7 @@ jobs:
   backend_build:
     docker:
       - image: circleci/node:latest
-    working_directory: ~/backend/
+    working_directory: ~./backend
     steps:
       - checkout
       - run:
