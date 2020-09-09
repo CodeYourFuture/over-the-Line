@@ -2,7 +2,7 @@ version: 2.1
 executorType: machine
 jobs:
   backend_build:
-    working_directory: ~/backend
+    working_directory: ~/dos
     docker:
       - image: circleci/node:latest
     steps:
