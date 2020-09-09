@@ -8,6 +8,9 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run:
+          name: Docker build backend
+          command: docker build --tag backend:1.0 .
 
   frontend_build:
     working_directory: ~/frontend
@@ -16,6 +19,9 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run:
+          name: Docker build frontend
+          command: docker build --tag fronted:1.0 .
 
 workflows:
   version: 2
