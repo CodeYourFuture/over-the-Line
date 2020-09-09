@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           name: docker frontend
-          command: docker build -t ccodeYourFuture/over-the-Line/tree --build ./frontend && docker tag over-the-line_client_1:latest
+          command: docker build -t codeYourFuture/over-the-Line/tree --build ./frontend && docker tag over-the-line_client_1:latest
 
 workflows:
   version: 2
