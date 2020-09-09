@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: docker build
-          command: docker-compose up
+          command: docker-compose up --build
 
 workflows:
   version: 2
