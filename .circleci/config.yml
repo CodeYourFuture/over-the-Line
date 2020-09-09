@@ -10,7 +10,7 @@ jobs:
       - run: npm install
       - run:
           name: Docker build backend
-          command: docker build backend
+          command: docker build -t backend .
 
   frontend_build:
     working_directory: ~/frontend
@@ -21,7 +21,7 @@ jobs:
       - run: npm install
       - run:
           name: Docker build frontend
-          command: ddocker build frontend
+          command: ddocker build -t frontend .
 
 workflows:
   version: 2
