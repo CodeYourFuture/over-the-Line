@@ -8,8 +8,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: backend
-          command: docker-compose up
+          name: docker backend
+          command: docker-compose build
   frontend_build:
     working_directory: ~/frontend
     docker:
