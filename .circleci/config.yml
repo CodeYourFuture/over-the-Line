@@ -2,7 +2,7 @@ version: 2.1
 executorType: machine
 jobs:
   backend_build:
-    working_directory: /backend
+    working_directory: ~/backend
     docker:
       - image: circleci/node:latest
     steps:
@@ -11,7 +11,7 @@ jobs:
           name: docker backend
           command: docker-compose build
   frontend_build:
-    working_directory: /frontend
+    working_directory: ~/frontend
     docker:
       - image: circleci/node:latest
     steps:
