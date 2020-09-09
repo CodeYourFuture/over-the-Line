@@ -1,16 +1,16 @@
 version: 2.1
 
 jobs:
-  build:
-    working_directory: ~/backend
+  backend_build:
     docker:
       - image: circleci/node:latest
+    working_directory: ~/backend
     steps:
       - checkout
       - run:
           name: docker backend
           command: docker-compose up
-  build2:
+  frontend_build:
     working_directory: ~/frontend
     docker:
       - image: circleci/node:latest
@@ -25,7 +25,7 @@ workflows:
 
   my_workflow:
     jobs:
-      - build
-      - build2:
+      - backend_build
+      - frontend_build:
           requires:
-            - build
+            - backend_build
