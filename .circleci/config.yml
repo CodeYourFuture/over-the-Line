@@ -1,19 +1,31 @@
 version: 2.1
 executorType: machine
 jobs:
-  build:
-    working_directory: ~/build
+  backend_build:
+    working_directory: ~/backend
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
       - run:
-          name: docker build
-          command: docker-compose up --build
+          name: docker backend
+          command: docker build -t CodeYourFuture/over-the-Line/tree --build ./frontend && docker tag over-the-line_backend_1:latest
+  frontend_build:
+    working_directory: ~/frontend
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run:
+          name: docker frontend
+          command: docker build -t CodeYourFuture/over-the-Line/tree --build ./frontend && docker tag over-the-line_client_1:latest
 
 workflows:
   version: 2
 
   my_workflow:
     jobs:
-      - build
+      - backend_build
+      - frontend_build:
+          requires:
+            - backend_build
