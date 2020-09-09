@@ -4,16 +4,16 @@ jobs:
   backend_build:
     docker:
       - image: circleci/node:latest
-    working_directory: ~/backend
+    working_directory: ~/backend/app
     steps:
       - checkout
       - run:
           name: docker backend
           command: docker-compose up
   frontend_build:
-    working_directory: ~/frontend
     docker:
       - image: circleci/node:latest
+    working_directory: ~/frontend/app
     steps:
       - checkout
       - run:
