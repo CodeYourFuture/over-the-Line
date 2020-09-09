@@ -2,14 +2,14 @@ version: 2.1
 executorType: machine
 jobs:
   backend_build:
-    working_directory: ~/dos
+    working_directory: ~/app
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
       - run:
           name: docker backend
-          command: cd && docker-compose up
+          command: docker-compose up
   frontend_build:
     working_directory: ~/frontend
     docker:
@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           name: docker frontend
-          command: cd && docker-compose up
+          command: docker-compose up
 
 workflows:
   version: 2.1
