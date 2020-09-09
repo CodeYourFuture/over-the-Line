@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: docker backend
-          command: docker build -t codeYourFuture/over-the-Line/tree --build ./frontend && docker tag over-the-line_backend_1:latest
+          command: docker build
   frontend_build:
     working_directory: ~/frontend
     docker:
@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           name: docker frontend
-          command: docker build -t codeYourFuture/over-the-Line/tree --build ./frontend && docker tag over-the-line_client_1:latest
+          command: docker build
 
 workflows:
   version: 2
