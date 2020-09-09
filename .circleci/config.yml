@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Docker build backend
-          command: docker build -t backend .
+          command: docker build -t ./backend backend .
 
   frontend_build:
     working_directory: ~/frontend
@@ -19,7 +19,7 @@ jobs:
       - checkout
       - run:
           name: Docker build frontend
-          command: docker build -t frontend .
+          command: docker build -t ./frontend frontend .
 
 workflows:
   version: 2
