@@ -2,7 +2,7 @@ version: 2.1
 executorType: machine
 jobs:
   backend_build:
-    working_directory: ~/backend
+    working_directory: ./backend
     build: ./backend
     docker:
       - image: circleci/node:latest
@@ -13,8 +13,7 @@ jobs:
           command: docker build -t over-the-line_backend_1:latest
 
   frontend_build:
-    working_directory: ~/frontend
-    build: ./frontend
+    working_directory: ./frontend
     docker:
       - image: circleci/node:latest
     steps:
