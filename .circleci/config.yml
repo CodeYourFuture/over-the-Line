@@ -3,7 +3,6 @@ executorType: machine
 jobs:
   backend_build:
     working_directory: ./backend
-    build: ./backend
     docker:
       - image: circleci/node:latest
     steps:
