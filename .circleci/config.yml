@@ -19,7 +19,7 @@ jobs:
       - checkout
       - run:
           name: Docker build frontend
-          command: sudo cdocker build -t over-the-line_client_1:latest .
+          command: sudo docker build -t over-the-line_client_1:latest .
 
 workflows:
   version: 2
