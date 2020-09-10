@@ -7,9 +7,7 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run:
-          name: Docker build backend
-          command: sudo docker build -t over-the-line_backend_1:latest .
+      - run: npm install
 
   frontend_build:
     working_directory: ~/frontend
@@ -17,16 +15,16 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run:
-          name: Docker build frontend
-          command: sudo docker build -t over-the-line_client_1:latest .
+      - run: npm install
+      - run: npm run build
 
 workflows:
   version: 2
 
   my_workflow:
     jobs:
-      - backend_build
+      - backend_build:
+          context: build
       - frontend_build:
           requires:
             - backend_build
