@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   backend_build:
-    working_directory: ~/backend/
+    working_directory: ~/backend/app
     docker:
       - image: circleci/node:latest
     steps:
@@ -12,7 +12,7 @@ jobs:
           command: sudo docker build -t over-the-line_backend_1:latest .
 
   frontend_build:
-    working_directory: ~/frontend/cc
+    working_directory: ~/frontend/app
     docker:
       - image: circleci/node:latest
     steps:
