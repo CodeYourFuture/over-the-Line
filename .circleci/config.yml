@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Docker build backend
-          command: docker build -t over-the-line_backend_1:latest
+          command: docker build -t over-the-line_backend_1:latest .
 
   frontend_build:
     working_directory: ~/app
