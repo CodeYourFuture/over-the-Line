@@ -3,6 +3,7 @@ executorType: machine
 jobs:
   backend_build:
     working_directory: ~/backend
+    build: ./backend
     docker:
       - image: circleci/node:latest
     steps:
@@ -13,13 +14,14 @@ jobs:
 
   frontend_build:
     working_directory: ~/frontend
+    build: ./frontend
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
       - run:
           name: Docker build frontend
-          command: docker build -t over-the-line_client_1 .
+          command: docker build -t over-the-line_client_1:latest .
 
 workflows:
   version: 2
