@@ -15,8 +15,8 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: npm install
-      - run: npm run build
+      - run: cd frontend && npm install
+      - run: cd frontend && npm run build
 
 workflows:
   version: 2
