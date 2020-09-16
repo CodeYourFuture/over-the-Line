@@ -40,17 +40,16 @@ npm install
 cd frontend
 npm install
 ```
-- Run project locally with npm:
-
 ```bash
 npm start
 ```
 #### To install and run project locally with docker:
 
+To dockerize the app, refer to the link in resources
+
 ```bash
 docker-compose up
 ```
-To dockerize the app, refer to the link in resources
 
 ## Create .env
 
