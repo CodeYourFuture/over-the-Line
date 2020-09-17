@@ -7,28 +7,7 @@ New website that hosts Compass Collective students artworks to make these public
 
 Target Audience - publicly available.
 
-### Team members
-
-- Project manager - [Sonjide Hussain] (https://github.com/Sonjide)
-- Front-End Developer - [Alexandru Budaca](https://github.com/AlexandruBudaca)
-- Front-End Developer - [Alexey Brambalov](https://github.com/AlexeyBrambalov)
-- Back-end Developer - [Serkan Cavus](https://github.com/SCavus)
-- Product Manager - Neha Datt
-- Technical Assistant #1 - [Gerald(aka dahfool)](https://github.com/dahfool)
-- Technical Assistant #2 - [Esme Hotston Moore](https://github.com/esmehm)
-- UI/UX Designer - [Zach Pinfold](https://github.com/ZachPinfold)
-
-### Resources
-
-- React  (https://reactjs.org/docs/create-a-new-react-app.html)
-- React Bootstrap (https://react-bootstrap.github.io/)
-- ESLint (https://eslint.org/docs/user-guide/getting-started)
-- Express (https://www.npmjs.com/package/express-generator)
-- Mongoose (https://mongoosejs.com/docs/guide.html)
-- Docker (https://www.docker.com/get-started)
-- CircleCI (https://circleci.com/)
-
-### Install project dependencies in the root directory:
+### Install project dependencies in the directories:
 
 #### To install and run project locally with npm:
 
@@ -55,3 +34,24 @@ docker-compose up
 
 - Create a .env file inside the backend folder and copy all variables from .env.example
 - Create a .env file inside the frontend folder and copy all variables from .env.example
+
+### Resources
+
+- React  (https://reactjs.org/docs/create-a-new-react-app.html)
+- React Bootstrap (https://react-bootstrap.github.io/)
+- ESLint (https://eslint.org/docs/user-guide/getting-started)
+- Express (https://www.npmjs.com/package/express-generator)
+- Mongoose (https://mongoosejs.com/docs/guide.html)
+- Docker (https://www.docker.com/get-started)
+- CircleCI (https://circleci.com/)
+
+### Team members
+
+- Project manager - [Sonjide Hussain] (https://github.com/Sonjide)
+- Front-End Developer - [Alexandru Budaca](https://github.com/AlexandruBudaca)
+- Front-End Developer - [Alexey Brambalov](https://github.com/AlexeyBrambalov)
+- Back-end Developer - [Serkan Cavus](https://github.com/SCavus)
+- Product Manager - Neha Datt
+- Technical Assistant #1 - [Gerald(aka dahfool)](https://github.com/dahfool)
+- Technical Assistant #2 - [Esme Hotston Moore](https://github.com/esmehm)
+- UI/UX Designer - [Zach Pinfold](https://github.com/ZachPinfold)
